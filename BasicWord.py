@@ -4,11 +4,12 @@ class BasicWord:
         self.subword = subword
 
     def get_count_words(self):
-        count_words = len(self.subword)
-        return count_words
+        # count_words = len(self.subword)
+        return len(self.subword)
+
 
     def correct_word(self, user_word):
-        if user_word in self.subword:
-            return True
-        else:
+        if user_word not in self.subword:
             print('Это слово использовать нельзя')
+            return False
+        return True
